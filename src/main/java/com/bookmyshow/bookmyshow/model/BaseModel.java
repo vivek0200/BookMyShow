@@ -2,6 +2,7 @@ package com.bookmyshow.bookmyshow.model;
 
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 import java.util.Date;
