@@ -1,7 +1,7 @@
 package com.bookmyshow.bookmyshow.model;
 
-public enum BookingStatus {
-    CONFIRMED,
+public enum PaymentStaus {
+    FAILED,
     PENDING,
-    CANCELLED
+    SUCCESSFUL
 }

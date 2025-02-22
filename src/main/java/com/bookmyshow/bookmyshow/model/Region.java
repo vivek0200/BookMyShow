@@ -9,4 +9,6 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Region extends BaseModel {
+    private String name;
+
 }

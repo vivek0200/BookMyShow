@@ -6,13 +6,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.xml.crypto.Data;
+import java.util.Date;
 
 @MappedSuperclass
 @Getter
 @Setter
 public class BaseModel {
     @Id
-    private int id;
-    private Data createdAt;
-    private Data updatedAt;
+    private Integer id;
+    private Date createdAt;
+    private Date updatedAt;
 }
