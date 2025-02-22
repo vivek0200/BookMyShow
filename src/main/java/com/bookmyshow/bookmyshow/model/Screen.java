@@ -3,8 +3,6 @@ package com.bookmyshow.bookmyshow.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.awt.*;
 import java.util.List;
 
 @Entity
