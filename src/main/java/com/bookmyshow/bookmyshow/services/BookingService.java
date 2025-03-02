@@ -5,12 +5,11 @@ import com.bookmyshow.bookmyshow.repository.BookingRepository;
 import com.bookmyshow.bookmyshow.repository.ShowRepository;
 import com.bookmyshow.bookmyshow.repository.ShowSeatRepository;
 import com.bookmyshow.bookmyshow.repository.UserRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -23,6 +22,7 @@ public class BookingService {
     private ShowRepository showRepository;
     private ShowSeatRepository showSeatRepository;
     private BookingRepository bookingRepository;
+
     @Autowired
     BookingService(UserRepository userRepository, ShowRepository showRepository, ShowSeatRepository showSeatRepository,
                    BookingRepository bookingRepository) {
@@ -31,7 +31,8 @@ public class BookingService {
         this.showSeatRepository = showSeatRepository;
         this.bookingRepository = bookingRepository;
     }
-    @Transactional(isolation=Isolation.SERIALIZABLE)
+
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public Booking bookTicket(int showId, int userId, List<Integer>showSeatIds) {
         Booking booking = new Booking();
         Optional<User> userOptional=userRepository.findById(userId);
