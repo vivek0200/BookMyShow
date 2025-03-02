@@ -15,6 +15,7 @@ public class UserService {
     UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
+
     public User SignUp(String firstName,String lastName,String email,String password) {
         User user = new User();
         Optional<User>optionalUser=userRepository.findByEmail(email);
