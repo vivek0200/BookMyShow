@@ -24,8 +24,7 @@ public class BookingService {
     private BookingRepository bookingRepository;
 
     @Autowired
-    BookingService(UserRepository userRepository, ShowRepository showRepository, ShowSeatRepository showSeatRepository,
-                   BookingRepository bookingRepository) {
+    BookingService(UserRepository userRepository, ShowRepository showRepository, ShowSeatRepository showSeatRepository, BookingRepository bookingRepository) {
         this.userRepository = userRepository;
         this.showRepository = showRepository;
         this.showSeatRepository = showSeatRepository;

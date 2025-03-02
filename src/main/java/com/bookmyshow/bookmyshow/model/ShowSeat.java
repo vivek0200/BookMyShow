@@ -21,4 +21,17 @@ public class ShowSeat extends BaseModel{
     private SeatStatus seatStatus;
 
     private Date blockedAt;
+
+    public Date getBlockedAt() {
+        return blockedAt;
+    }
+    public void setBlockedAt(Date blockedAt) {
+        this.blockedAt = blockedAt;
+    }
+    public SeatStatus getSeatStatus() {
+        return seatStatus;
+    }
+    public void setSeatStatus(SeatStatus seatStatus) {
+        this.seatStatus = seatStatus;
+    }
 }

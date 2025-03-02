@@ -6,6 +6,17 @@ import lombok.Setter;
 @Getter
 @Setter
 public class SignUpResponseDTO {
-    private int userId;
-    private ResponseStatus responseStatus;
+    public int userId;
+    public ResponseStatus responseStatus;
+
+    public void setResponseStatus(ResponseStatus responseStatus) {
+        this.responseStatus = responseStatus;
+    }
+    public ResponseStatus getResponseStatus() {
+        return responseStatus;
+    }
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
 }
